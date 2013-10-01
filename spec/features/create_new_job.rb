@@ -39,8 +39,7 @@ describe 'User create new job' do
     end
 
     it "should redirect on show page" do
-      #expect(response).to redirect_to(show)
-      #expect(page).to have_content("Job was successfully created.")
+      expect(page).to have_content("Job was successfully created.")
     end
   end
 end
