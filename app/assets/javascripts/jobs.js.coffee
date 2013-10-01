@@ -6,7 +6,6 @@ $(document).ready ->
   callback = ->
     $('#jobs').dataTable
       bJQueryUI: true
-      sPaginationType: "full_numbers"
       bPaginate: false
       bLengthChange: true
       bFilter: false

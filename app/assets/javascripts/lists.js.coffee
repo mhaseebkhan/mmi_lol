@@ -11,11 +11,11 @@ $(document).ready ->
       bLengthChange: true
       bFilter: false
       bSort: true
-      bInfo: true
+      bInfo: false
       bAutoWidth: true
       bRetrive: false
       bDestroy: true
-  setTimeout(callback, 3000)
+  setTimeout(callback, 1000)
 
 
 
