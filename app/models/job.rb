@@ -14,6 +14,7 @@ class Job < ActiveRecord::Base
 
   validates :name, presence: true
   validates :number, presence: true, numericality: true
+  validates_attachment :file, :presence =>  {:message =>"must be attached."}
 
   has_many :lists
 
