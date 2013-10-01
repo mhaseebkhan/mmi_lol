@@ -1,0 +1,30 @@
+<h1>Listing jobs</h1>
+
+    <table id="jobs" class="display">
+      <thead>
+          <tr>
+            <th>Name</th>
+            <th>Number</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+      </thead>
+      <tbody>
+        <% @jobs.each do |job| %>
+          <tr>
+            <td><%= job.name %></td>
+            <td><%= job.number %></td>
+            <td><%= link_to 'Show', job %></td>
+            <td><%= link_to 'Edit', edit_job_path(job) %></td>
+            <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+
+<br />
+
+<%= link_to 'New Job', new_job_path, class: "btn btn-large btn-primary" %>
+

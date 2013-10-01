@@ -1,0 +1,110 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Job:</b>
+  <%= @list.job_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @list.list_name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @list.list_type %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%= @list.list_code %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @list.status %>
+</p>
+
+<p>
+  <b>Po:</b>
+  <%= @list.po %>
+</p>
+
+<p>
+  <b>Segment:</b>
+  <%= @list.segment %>
+</p>
+
+<p>
+  <b>Segment2:</b>
+  <%= @list.segment2 %>
+</p>
+
+<p>
+  <b>Date received:</b>
+  <%= @list.date_received %>
+</p>
+
+<p>
+  <b>Expected quantity:</b>
+  <%= @list.expected_quantity %>
+</p>
+
+<p>
+  <b>Declared quantity:</b>
+  <%= @list.declared_quantity %>
+</p>
+
+<p>
+  <b>Received quantity:</b>
+  <%= @list.received_quantity %>
+</p>
+
+<p>
+  <b>Converted quantity:</b>
+  <%= @list.converted_quantity %>
+</p>
+
+<p>
+  <b>Approved:</b>
+  <%= @list.approved %>
+</p>
+
+<p>
+  <b>Approved by:</b>
+  <%= @list.approved_by %>
+</p>
+
+<p>
+  <b>Approved at:</b>
+  <%= @list.approved_at %>
+</p>
+
+<p>
+  <b>Canceled:</b>
+  <%= @list.canceled %>
+</p>
+
+<p>
+  <b>Canceled by:</b>
+  <%= @list.canceled_by %>
+</p>
+
+<p>
+  <b>Canceled at:</b>
+  <%= @list.canceled_at %>
+</p>
+
+<p>
+  <b>Conversion rejects:</b>
+  <%= @list.conversion_rejects %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @list.comments %>
+</p>
+
+
+<%= link_to 'Edit', edit_list_path(@list) %> |
+<%= link_to 'Back', lists_path %>

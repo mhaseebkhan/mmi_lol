@@ -1,0 +1,105 @@
+<div class="row">
+  <div class="well span6 offset3">
+<%= form_for @list, :html => { :multipart => true } do |f| %>
+  <% if @list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
+
+      <ul>
+      <% @list.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!--<div class="field">-->
+    <%#= f.label :job_id %>
+    <!--<%#= f.number_field :job_id %>-->
+  <!--</div>-->
+  <div class="field">
+    <%= f.label :list_name %>
+    <%= f.text_field :list_name %>
+  </div>
+  <div class="field">
+    <%= f.label :list_type %>
+    <%= f.text_field :list_type %>
+  </div>
+  <div class="field">
+    <%= f.label :list_code %>
+    <%= f.text_field :list_code %>
+  </div>
+  <!--<div class="field">-->
+    <!--<%#= f.label :status %>-->
+    <!--<%#= f.text_field :status %>-->
+  <!--</div>-->
+  <div class="field">
+    <%= f.label :po %>
+    <%= f.text_field :po %>
+  </div>
+  <div class="field">
+    <%= f.label :segment %>
+    <%= f.text_field :segment %>
+  </div>
+  <!--<div class="field">-->
+    <!--<%#= f.label :segment2 %>-->
+    <!--<%#= f.text_field :segment2 %>-->
+  <!--</div>-->
+  <div class="field">
+    <%= f.label :date_received %>
+    <%= f.date_select :date_received%>
+  </div>
+  <div class="field">
+    <%= f.label :expected_quantity %>
+    <%= f.text_field :expected_quantity %>
+  </div>
+  <!--<div class="field">-->
+    <!--<%#= f.label :declared_quantity %>-->
+    <!--<%#= f.text_field :declared_quantity %>-->
+  <!--</div>-->
+  <div class="field">
+    <%= f.label :received_quantity %>
+    <%= f.text_field :received_quantity %>
+  </div>
+  <!--<div class="field">-->
+    <!--<%#= f.label :converted_quantity %>-->
+    <!--<%#= f.text_field :converted_quantity %>-->
+  <!--</div>-->
+  <!--<div class="field">-->
+    <!--<%#= f.label :approved %>-->
+    <!--<%#= f.check_box :approved %>-->
+  <!--</div>-->
+  <!--<div class="field">-->
+    <!--<%#= f.label :approved_by %>-->
+    <!--<%#= f.number_field :approved_by %>-->
+  <!--</div>-->
+  <!--<div class="field">-->
+    <!--<%#= f.label :approved_at %>-->
+    <!--<%#= f.datetime_select :approved_at %>-->
+  <!--</div>-->
+  <!--<div class="field">-->
+    <!--<%#= f.label :canceled %>-->
+    <!--<%#= f.check_box :canceled %>-->
+  <!--</div>-->
+  <!--<div class="field">-->
+    <!--<%#= f.label :canceled_by %>-->
+    <!--<%#= f.number_field :canceled_by %>-->
+  <!--</div>-->
+  <!--<div class="field">-->
+    <!--<%#= f.label :canceled_at %>-->
+    <!--<%#= f.datetime_select :canceled_at %>-->
+  <!--</div>-->
+  <!--<div class="field">-->
+    <!--<%#= f.label :conversion_rejects %>-->
+    <!--<%#= f.text_field :conversion_rejects %>-->
+  <!--</div>-->
+  <!--<div class="field">-->
+    <!--<%#= f.label :comments %>-->
+    <!--<%#= f.text_area :comments %>-->
+  <!--</div>-->
+  <div class="actions">
+    <%= f.submit "Update", class: "btn btn-large btn-primary" %>
+  </div>
+ </div>
+</div>
+<% end %>

@@ -1,0 +1,65 @@
+<!--<h1>Listing lists</h1>-->
+
+
+    <table id="lists" class="display">
+      <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Code</th>
+            <!--<th>Status</th>-->
+            <th>Po</th>
+            <th>Segment</th>
+            <!--<th>Segment2</th>-->
+            <th>Date received</th>
+            <th>Expected quantity</th>
+            <!--<th>Declared quantity</th>-->
+            <th>Received quantity</th>
+            <th>Variance</th>
+            <!--<th>Converted quantity</th>-->
+            <!--<th>Approved</th>-->
+            <!--<th>Approved by</th>-->
+            <!--<th>Approved at</th>-->
+            <!--<th>Canceled</th>-->
+            <!--<th>Canceled by</th>-->
+            <!--<th>Canceled at</th>-->
+            <!--<th>Conversion rejects</th>-->
+            <!--<th>Comments</th>-->
+            <th></th>
+            <th></th>
+          </tr>
+      </thead>
+      <tbody>
+        <% @lists.each do |list| %>
+          <tr>
+            <!--<td><%#= list.job_id %></td>-->
+            <td><%= list.list_name %></td>
+            <td><%= list.list_type %></td>
+            <td><%= list.list_code %></td>
+            <!--<td><%#= list.status %></td>-->
+            <td><%= list.po %></td>
+            <td><%= list.segment %></td>
+            <!--<td><%#= list.segment2 %></td>-->
+            <td><%= list.date_received.strftime("%m/%d/%y") %></td>
+            <td><%= list.expected_quantity %></td>
+            <!--<td><%#= list.declared_quantity %></td>-->
+            <td><%= list.received_quantity %></td>
+            <!--<td><%#= list.converted_quantity %></td>-->
+            <td><%= list.received_quantity - list.expected_quantity %></td>
+            <!--<td><%#= list.approved_by %></td>-->
+            <!--<td><%#= list.approved_at %></td>-->
+            <!--<td><%#= list.canceled %></td>-->
+            <!--<td><%#= list.canceled_by %></td>-->
+            <!--<td><%#= list.canceled_at %></td>-->
+            <!--<td><%#= list.conversion_rejects %></td>-->
+            <!--<td><%#= list.comments %></td>-->
+            <!--<td><%#= link_to 'Show', list %></td>-->
+            <td><%= link_to 'Edit', edit_list_path(list) %></td>
+            <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+       </tbody>
+    </table>
+
+<%#= link_to 'New List', new_list_path %>
+
